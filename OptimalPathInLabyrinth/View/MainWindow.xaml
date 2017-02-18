@@ -1,0 +1,24 @@
+﻿<Window x:Class="OptimalPathInLabyrinth.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OptimalPathInLabyrinth"
+        xmlns:controls="clr-namespace:OptimalPathInLabyrinth.Controls"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+        Title="{Binding WindowTitle}" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        
+        <controls:LabyrinthControl Matrix="{Binding MatrixVM}" Margin="10"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical"  Margin="10">
+            <Button Command="{Binding StartCommand}">Start</Button>
+            <TextBlock Text="Generation" Margin="0,20,0,0" TextAlignment="Center"/>
+            <TextBlock Text="{Binding CurrentGeneration}" TextAlignment="Center" FontSize="24"/>
+        </StackPanel>
+    </Grid>
+</Window>

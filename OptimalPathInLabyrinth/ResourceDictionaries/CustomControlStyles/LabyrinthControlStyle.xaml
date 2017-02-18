@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:control="clr-namespace:OptimalPathInLabyrinth.Controls" >
+    <Style TargetType="{x:Type control:LabyrinthControl}">
+        <Setter Property="WallBrush" Value="Gray" />
+        <Setter Property="EmptyCellBrush" Value="White" />
+        <Setter Property="StartPointBrush" Value="Red" />
+        <Setter Property="FinishPointBrush" Value="Green" />
+        <Setter Property="FirstGenerationBrush" Value="LightBlue" />
+        <Setter Property="SecondGenerationBrush" Value="Blue" />
+        <Setter Property="FoundPathBrush" Value="Orange" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Canvas Name="PART_Canvas" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>
